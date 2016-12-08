@@ -25,6 +25,9 @@ use Validator;
 use Illuminate\Support\Facades\DB;
 
 use Image;
+// import the Intervention Image Manager Class
+//use Intervention\Image\ImageManager;
+use Intervention\Image\ImageManager;
 
 class UserController extends Controller
 {
@@ -51,7 +54,7 @@ class UserController extends Controller
             User::FIREBASE_ID => 'unique:' . User::TABLE_NAME,
         ]);
         if ($validator->fails()) {
-            return $this->getReturnMessage(self::EMAIL_UNIQUE, null, $validator->errors()->all());
+            return $this->getReturnMessage(self::FIREBASE_UNIQUE, null, $validator->errors()->all());
         }
 //        //avatar
         if ($request->file('avatar')) {

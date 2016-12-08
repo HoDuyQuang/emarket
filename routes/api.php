@@ -48,7 +48,9 @@ Route::post('/follows/unfollow', ['uses' => 'FollowController@unfollow']);
 Route::get('/follows/get_follower', ['uses' => 'FollowController@get_follower']);
 Route::get('/follows/get_following', ['uses' => 'FollowController@get_following']);
 
-Route::get('/articles/get_home', ['uses' => 'ArticlesController@get_home']);
+Route::get('/posts/get_home', ['uses' => 'PostController@get_home']);
 Route::get('/articles/article_detail', ['uses' => 'ArticlesController@get_article_detail']);
 
 Route::post('/requests/sync', ['uses' => 'RequestController@sync']);
+
+Route::get('/requests/init', ['uses' => 'RequestController@init']);

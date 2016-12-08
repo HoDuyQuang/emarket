@@ -34,9 +34,9 @@ class Controller extends BaseController
         "code" => 102,
         "message" => "SQL Error"
     ];
-    const EMAIL_UNIQUE = [
+    const FIREBASE_UNIQUE = [
         "code" => 103,
-        "message" => "Email unique"
+        "message" => "Firebase unique"
     ];
     const LOGIN_FAIL = [
         "code" => 104,

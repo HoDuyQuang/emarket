@@ -30,7 +30,7 @@ class User extends Authenticatable
     protected $table=self::TABLE_NAME;
     protected $fillable = [
         self::ID,self::SOCIAL, self::FIRST_NAME, self::LAST_NAME, self::MIDDLE_NAME, self::AVATAR_URL, self::PHONE, self::EMAIL,
-        self::ADDRESS
+        self::ADDRESS,self::FIREBASE_ID
     ];
 
     /**
